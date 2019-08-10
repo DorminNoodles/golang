@@ -18,3 +18,8 @@ The * operator denotes the pointer's underlying value.
 This is known as "dereferencing" or "indirecting".
 
 Unlike C, Go has no pointer arithmetic.
+
+
+## 02 Structs
+
+A struct is a collection of fields.
