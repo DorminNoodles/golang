@@ -15,6 +15,7 @@ The loop will stop iterating once the boolean condition evaluates to false.
 
 The init and post statements are optional.
 
+	sum := 1
 	for ; sum < 1000 {
 		sum += sum
 	}
