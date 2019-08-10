@@ -6,15 +6,17 @@ Say Hello Go !
 
 ## 02 Import Packages
 
-	You can import like this :
-		import "fmt"
-		import "math"
+You can import like this :
 
-	But prefer import like this :
-		import (
-			"fmt"
-			"math"
-		)
+	import "fmt"
+	import "math"
+
+But prefer import like this :
+	
+	import (
+		"fmt"
+		"math"
+	)
 
 ## 03 Exported Names
 
