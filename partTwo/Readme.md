@@ -53,7 +53,7 @@ Variables declared by the statement are only in scope until the end of the if.
 Variables declared inside an if short statement are also available inside any of the else blocks.
 
 
-## Switch
+## 03 Switch
 
 A switch statement is a shorter way to write a sequence of if - else statements. It runs the first case whose value is equal to the condition expression.
 
@@ -86,7 +86,7 @@ This construct can be a clean way to write long if-then-else chains.
 	}
 
 
-## Defer
+## 04 Defer
 
 A defer statement defers the execution of a function until the surrounding function returns.
 
