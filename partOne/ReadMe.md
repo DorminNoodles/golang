@@ -45,4 +45,5 @@ In this example, we shortened
 
 	x int, y int
 to
+
 	x, y int
