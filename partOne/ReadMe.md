@@ -47,3 +47,15 @@ In this example, we shortened
 to
 
 	x, y int
+
+## 05 Functions Multiple Results
+
+A function can return any number of results.
+
+	func swap(x,y string) (string, string) {
+		return y, x
+	}
+
+We get the return with the `:=` operator
+
+	a,b := swap("hello", "world")
