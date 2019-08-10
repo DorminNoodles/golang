@@ -93,8 +93,26 @@ A defer statement defers the execution of a function until the surrounding funct
 The deferred call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
 
 	func main() {
-	defer fmt.Println("world")
+		defer fmt.Println("world")
 
-	fmt.Println("hello")
+		fmt.Println("hello")
 	}
 	//hello world
+
+### Stacking defers
+
+Deferred function calls are pushed onto a stack. When a function returns, its deferred calls are executed in last-in-first-out order.
+
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+	//9
+	//8
+	//7
+	//6
+	//5
+	//4
+	//3
+	//2
+	//1
+	//0
