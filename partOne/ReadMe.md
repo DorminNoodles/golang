@@ -59,3 +59,5 @@ A function can return any number of results.
 We get the return with the `:=` operator
 
 	a,b := swap("hello", "world")
+
+Link to documentation https://golang.org/ref/spec#Short_variable_declarations
