@@ -77,3 +77,31 @@ Naked return statements should be used only in short functions, as with the exam
 		y = sum - x
 		return //x, y
 	}
+
+## 07 Variables
+
+The var statement declares a list of variables; as in function argument lists, the type is last.
+
+A var statement can be at package or function level. We see both in this example.
+
+	package main
+
+	import "fmt"
+
+	var c, python, java bool
+
+	func main() {
+		var i int
+		fmt.Println(i, c, python, java)
+	}
+
+## 08 Variables with initializers
+A var declaration can include initializers, one per variable.
+
+If an initializer is present, the type can be omitted; the variable will take the type of the initializer.
+
+	var i, j int = 1, 2
+
+	func main() {
+		var c, python, java = true, false, "no!"
+	}
