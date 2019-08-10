@@ -25,5 +25,5 @@ In Go, a name is exported if it begins with a capital letter. For example, `Pizz
 `pizza` and `pi` do not start with a capital letter, so they are not exported.
 When importing a package, you can refer only to its exported names. Any "unexported" names are not accessible from outside the package.
 	
-	fmt.Println(math.Pi)//Pi is exported
-	fmt.Println(math.pi)//but not pi
+	fmt.Println(math.Pi) //Pi is exported
+	fmt.Println(math.pi) //but not pi
