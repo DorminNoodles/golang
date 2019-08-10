@@ -9,9 +9,16 @@ func main() {
 	}
 	fmt.Println(sum)
 
-	sum = 1;
+	sum = 1
 	//optional statements
 	for ; sum < 1000; {
+		sum += sum
+	}
+	fmt.Println(sum)
+
+	sum = 1
+	//for is while in Go
+	for sum < 1000 {
 		sum += sum
 	}
 	fmt.Println(sum)

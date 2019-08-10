@@ -1,3 +1,5 @@
+# Go Part Two
+
 ## 01 For
 For
 Go has only one looping construct, the for loop.
@@ -19,3 +21,19 @@ The init and post statements are optional.
 	for ; sum < 1000 {
 		sum += sum
 	}
+
+At that point you can drop the semicolons: **C's while is spelled for in Go.**
+
+	for sum < 1000 {
+		sum += sum
+	}
+
+If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
+
+	for {
+
+	}
+
+## 02 If
+
+	Go's if statements are like its for loops; the expression need not be surrounded by parentheses ( ) but the braces { } are required.
