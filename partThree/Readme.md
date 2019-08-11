@@ -75,13 +75,28 @@ A slice is formed by specifying two indices, a low and high bound, separated by 
 
 This selects a half-open range which includes the first element, but excludes the last one.
 
-The following expression creates a slice which includes elements 1 through 3 of a:
+The following expression creates a slice which includes elements `1` through `3` of `a`:
 
 	a[1:4]
-	
-Slices are like references to arrays
+
+### Slices are like references to arrays
+
 A slice does not store any data, it just describes a section of an underlying array.
 
 Changing the elements of a slice modifies the corresponding elements of its underlying array.
 
 Other slices that share the same underlying array will see those changes.
+
+
+
+## 05 Slice literals
+
+A slice literal is like an array literal without the length.
+
+This is an array literal:
+
+	[3]bool{true, true, false}
+
+And this creates the same array as above, then builds a slice that references it:
+
+	[]bool{true, true, false}
