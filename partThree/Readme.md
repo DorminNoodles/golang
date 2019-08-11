@@ -100,3 +100,54 @@ This is an array literal:
 And this creates the same array as above, then builds a slice that references it:
 
 	[]bool{true, true, false}
+
+## 06 Slice defaults
+
+When slicing, you may omit the high or low bounds to use their defaults instead.
+
+The default is zero for the low bound and the length of the slice for the high bound.
+
+For the array
+
+	var a [10]int
+
+these slice expressions are equivalent:
+
+	a[0:10]
+	a[:10]
+	a[0:]
+	a[:]
+
+
+## 07 Slice length and capacity
+
+A slice has both a length and a capacity.
+
+The length of a slice is the number of elements it contains.
+
+The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
+
+The length and capacity of a slice s can be obtained using the expressions len(s) and cap(s).
+
+You can extend a slice's length by re-slicing it, provided it has sufficient capacity.
+
+### Nil slices
+The zero value of a slice is nil.
+
+A nil slice has a length and capacity of 0 and has no underlying array.
+
+
+## 08 Creating a slice with make
+
+Slices can be created with the built-in make function; this is how you create dynamically-sized arrays.
+
+The make function allocates a zeroed array and returns a slice that refers to that array:
+
+	a := make([]int, 5)  // len(a)=5
+
+To specify a capacity, pass a third argument to make:
+
+	b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+
+	b = b[:cap(b)] // len(b)=5, cap(b)=5
+	b = b[1:]      // len(b)=4, cap(b)=4
